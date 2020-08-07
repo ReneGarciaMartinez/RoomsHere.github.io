@@ -1,0 +1,313 @@
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+    body {
+        background-color: rgb(245, 245, 245)!important;
+    }
+    
+    .bienvenido {
+        font-family: 'Roboto Condensed', sans-serif;
+        text-shadow: 2px 2px 2px #eef5fa;
+    }
+    
+    .usuario {
+        color: rgb(0, 0, 0);
+    }
+    
+    .user_icon {
+        color: black !important;
+    }
+    
+    .img_card {
+        height: 180px;
+        width: 285px;
+        padding: 5px;
+    }
+    
+    .img_cardv {
+        height: 180px;
+        width: 370px;
+    }
+    
+    .img_carru {
+        height: 350px;
+        width: 3000px;
+    }
+    
+    .c_agregar {
+        width: 1000px;
+    }
+    
+    .caja {
+        font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+        color: #000000;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        background: #4ca7f1;
+        margin: 0 0 25px;
+        overflow: hidden;
+        padding: 20px;
+        border-radius: 35px 0px 35px 0px;
+        -moz-border-radius: 35px 0px 35px 0px;
+        -webkit-border-radius: 35px 0px 35px 0px;
+        border: 2px solid #979797;
+        height: 290px;
+    }
+    
+    .caja-texto {
+        color: white;
+    }
+    
+    .overlay {
+        background: rgba(0, 0, 0, .3);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        visibility: hidden;
+    }
+    
+    .overlay.active {
+        visibility: visible;
+    }
+    
+    .popup {
+        background: #F8F8F8;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+        border-radius: 3px;
+        font-family: 'Montserrat', sans-serif;
+        padding: 20px;
+        text-align: center;
+        width: 600px;
+        transition: .3s ease all;
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    
+    .popup .btn-cerrar-popup {
+        font-size: 16px;
+        line-height: 16px;
+        display: block;
+        text-align: right;
+        transition: .3s ease all;
+        color: #BBBBBB;
+    }
+    
+    .popup .btn-cerrar-popup:hover {
+        color: #000;
+    }
+    
+    .popup h3 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        opacity: 0;
+    }
+    
+    .popup h4 {
+        font-size: 26px;
+        font-weight: 300;
+        margin-bottom: 40px;
+        opacity: 0;
+    }
+    
+    .popup form .contenedor-inputs {
+        opacity: 0;
+    }
+    
+    .popup form .contenedor-inputs input {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 52px;
+        font-size: 18px;
+        line-height: 52px;
+        text-align: center;
+        border: 1px solid #BBBBBB;
+    }
+    
+    .popup form .btn-submit {
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        color: #fff;
+        background: #5E7DE3;
+        border-radius: 3px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        cursor: pointer;
+        transition: .3s ease all;
+    }
+    
+    .popup form .btn-submit:hover {
+        background: rgba(94, 125, 227, .9);
+    }
+    /* ------------------------- */
+    /* ANIMACIONES */
+    /* ------------------------- */
+    
+    .popup.active {
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+    .popup.active h3 {
+        animation: entradaTitulo .8s ease .5s forwards;
+    }
+    
+    .popup.active h4 {
+        animation: entradaSubtitulo .8s ease .5s forwards;
+    }
+    
+    .popup.active .contenedor-inputs {
+        animation: entradaInputs 1s linear 1s forwards;
+    }
+    
+    @keyframes entradaTitulo {
+        from {
+            opacity: 0;
+            transform: translateY(-25px);
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes entradaSubtitulo {
+        from {
+            opacity: 0;
+            transform: translateY(25px);
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes entradaInputs {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    /*cajas*/
+    
+    main {
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+    }
+    
+    .title {
+        text-align: center;
+        margin-top: 60px;
+    }
+    
+    .container-box {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .box {
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+        padding: 20px;
+        border: 2px solid #eeeeee;
+        border-radius: 14px;
+        text-align: center;
+        margin-top: 100px;
+        position: relative;
+    }
+    
+    .box img {
+        width: 60%;
+        transition: all 400ms;
+    }
+    
+    .box h2 {
+        font-size: 16px;
+        margin-top: 10px;
+        transition: all 500ms;
+    }
+    
+    .box .container-p {
+        width: 100%;
+        height: 150px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        padding: 0px 10px;
+        border-radius: 0px 0px 14px 14px;
+    }
+    
+    .box p {
+        font-size: 14px;
+        color: #7a7a7a;
+        opacity: 0;
+        transform: translateY(150px);
+        transition: all 600ms;
+    }
+    
+    .box .check {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        border: 2px solid #f5f5f5;
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        background: white;
+    }
+    
+    .box .check i {
+        margin-top: 6px;
+        display: none;
+        color: white
+    }
+    /*Efecto Hover*/
+    
+    .box:hover {
+        background: #fbfbfe;
+    }
+    
+    .box:hover img {
+        transform: translateY(-90px);
+    }
+    
+    .box:hover h2 {
+        transform: translateY(-90px);
+    }
+    
+    .box:hover .container-p p {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    /*Clases que estaremos utilizando en JavaScript*/
+    
+    .box-selected {
+        border-color: red;
+        transition: all 600ms;
+    }
+    
+    .icon-check {
+        display: block !important;
+    }
+    
+    .check-selected {
+        background: red !important;
+        border: none;
+        transition: all 600ms;
+    }
